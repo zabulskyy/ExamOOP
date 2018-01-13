@@ -53,9 +53,11 @@ public class SmartArrayApp {
             findDistinctStudentNamesFrom2ndYearWithGPAgt4AndOrderedBySurname(Student[] students) {
 
         // Hint: to convert Object[] to String[] - use the following code
-//        SmartArray studentSmartArray = new BaseArray(students);
-//        Object[] result = studentSmartArray.toArray();
-//        return Arrays.copyOf(result, result.length, String[].class);
-        return null;
+        SmartArray studentSmartArray = new BaseArray(students);
+        studentSmartArray = new DistinctDecorator(studentSmartArray);
+        System.out.println(studentSmartArray);
+        Object[] result = studentSmartArray.toArray();
+        return Arrays.copyOf(result, result.length, String[].class);
+//        return null;
     }
 }

@@ -5,11 +5,12 @@ import ua.edu.ucu.functions.MyPredicate;
 import java.util.ArrayList;
 
 // Remove duplicates from SmartArray. Use method equals() to compare objects
-public class DistinctDecorator extends SmartArrayDecorator {
+public class  DistinctDecorator extends SmartArrayDecorator {
 
 
     SmartArray smartArray;
     private Object[] array;
+    private Object object;
 
     public DistinctDecorator(SmartArray smartArray) {
         super(smartArray);
