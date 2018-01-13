@@ -10,7 +10,7 @@ public class SmartArrayApp {
 
     public static Integer[]
             filterPositiveIntegersSortAndMultiplyBy2(Integer[] integers) {
-                
+
         MyPredicate pr = new MyPredicate() {
             @Override
             public boolean test(Object t) {
@@ -36,9 +36,8 @@ public class SmartArrayApp {
         SmartArray sa = new BaseArray(integers);
 
         sa = new FilterDecorator(sa, pr); // Result: [2, 1, 3];
-
-//        sa = new SortDecorator(sa, cmp); // Result: [1, 2, 3]
-//        sa = new MapDecorator(sa, func); // Result: [2, 4, 6]
+        sa = new SortDecorator(sa, cmp); // Result: [1, 2, 3]
+        sa = new MapDecorator(sa, func); // Result: [2, 4, 6]
 
         // Alternative
 //        sa = new MapDecorator(
@@ -54,8 +53,9 @@ public class SmartArrayApp {
             findDistinctStudentNamesFrom2ndYearWithGPAgt4AndOrderedBySurname(Student[] students) {
 
         // Hint: to convert Object[] to String[] - use the following code
-        //Object[] result = studentSmartArray.toArray();
-        //return Arrays.copyOf(result, result.length, String[].class);
+//        SmartArray studentSmartArray = new BaseArray(students);
+//        Object[] result = studentSmartArray.toArray();
+//        return Arrays.copyOf(result, result.length, String[].class);
         return null;
     }
 }
