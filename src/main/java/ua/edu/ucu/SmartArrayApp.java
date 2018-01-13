@@ -55,7 +55,7 @@ public class SmartArrayApp {
         MyPredicate pr = new MyPredicate() {
             @Override
             public boolean test(Object t) {
-                return ((Student)t).getGPA() > 0;
+                return ((Student)t).getGPA() >= 4;
             }
         };
 
